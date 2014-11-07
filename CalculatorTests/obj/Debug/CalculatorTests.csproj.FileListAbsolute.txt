@@ -11,3 +11,5 @@ C:\Projects\GitHub\Calculator\CalculatorTests\bin\Debug\FluentAssertions.Core.xm
 C:\Projects\GitHub\Calculator\CalculatorTests\obj\Debug\CalculatorTests.csprojResolveAssemblyReference.cache
 C:\Projects\GitHub\Calculator\CalculatorTests\obj\Debug\CalculatorTests.dll
 C:\Projects\GitHub\Calculator\CalculatorTests\obj\Debug\CalculatorTests.pdb
+C:\Projects\GitHub\Calculator\CalculatorTests\bin\Debug\CalculatorTests.dll.config
+C:\Projects\GitHub\Calculator\CalculatorTests\bin\Debug\TechTalk.SpecFlow.dll

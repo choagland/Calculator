@@ -61,6 +61,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CalculatorSpec\Features\Adding.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Adding.feature</DependentUpon>
+    </Compile>
     <Compile Include="MyCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,10 +77,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CalculatorSpec\Features\Adding.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Adding.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CalculatorSpec\Features\" />
     <Folder Include="CalculatorSpec\Hooks\" />
     <Folder Include="CalculatorSpec\StepDefinitions\" />
   </ItemGroup>
