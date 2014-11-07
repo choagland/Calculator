@@ -8,5 +8,9 @@ namespace Calculator
 {
     public class MyCalculator
     {
+       public double GetResult()
+       {
+          throw new NotImplementedException();
+       }
     }
 }

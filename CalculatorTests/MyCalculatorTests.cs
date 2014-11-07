@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Calculator;
+using FluentAssertions;
 
 namespace CalculatorTests
 {
@@ -7,8 +9,10 @@ namespace CalculatorTests
    public class MyCalculatorTests
    {
       [TestMethod]
-      public void TestMethod1()
+      public void GetResult_Startup_ResultIsZero()
       {
+         var calc = new MyCalculator();
+         calc.GetResult().Should().Be(0);
       }
    }
 }
