@@ -66,6 +66,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Adding.feature</DependentUpon>
     </Compile>
+    <Compile Include="CalculatorSpec\StepDefinitions\AddingSteps.cs" />
     <Compile Include="MyCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CalculatorSpec\Hooks\" />
-    <Folder Include="CalculatorSpec\StepDefinitions\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
