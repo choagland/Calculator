@@ -8,9 +8,16 @@ namespace Calculator
 {
     public class MyCalculator
     {
+       private double CurrentResult;
+
+       public MyCalculator()
+       {
+          CurrentResult = 0;
+       }
+
        public double GetResult()
        {
-          throw new NotImplementedException();
+          return CurrentResult;
        }
     }
 }
