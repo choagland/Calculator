@@ -52,6 +52,10 @@ namespace Calculator
              {
                 return new SubtractionStrategy();
              }
+             case Operation.Multiply:
+             {
+                return new MultiplicationStrategy();
+             }
              default:
              {
                 throw new NotImplementedException();
@@ -86,6 +90,14 @@ namespace Calculator
       public double Calculate( double x, double y )
       {
          return x - y;
+      }
+   }
+
+   public class MultiplicationStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return x * y;
       }
    }
 }
