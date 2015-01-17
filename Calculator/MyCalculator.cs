@@ -19,5 +19,10 @@ namespace Calculator
        {
           return CurrentResult;
        }
+
+       public void SetCurrentNumber( int number )
+       {
+          throw new NotImplementedException();
+       }
     }
 }
