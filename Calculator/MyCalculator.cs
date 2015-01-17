@@ -57,6 +57,10 @@ namespace Calculator
              {
                 return new MultiplicationStrategy();
              }
+             case Operation.Divide:
+             {
+                return new DivisionStrategy();
+             }
              default:
              {
                 throw new NotImplementedException();
@@ -99,6 +103,14 @@ namespace Calculator
       public double Calculate( double x, double y )
       {
          return x * y;
+      }
+   }
+
+   public class DivisionStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return x / y;
       }
    }
 }
