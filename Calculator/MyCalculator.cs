@@ -13,6 +13,7 @@ namespace Calculator
     public class MyCalculator
     {
        private double _currentResult;
+       private Operation _currentOperation;
 
        public MyCalculator()
        {
@@ -31,7 +32,7 @@ namespace Calculator
 
        public void SetCurrentOperation( Operation operation )
        {
-          throw new NotImplementedException();
+          _currentOperation = operation;
        }
     }
 }

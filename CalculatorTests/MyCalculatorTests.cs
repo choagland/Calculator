@@ -29,7 +29,7 @@ namespace CalculatorTests
          var calc = new MyCalculator();
          calc.SetCurrentNumber( 3 );
          calc.SetCurrentOperation( Operation.Add );
-         calc.GetResult().Should().Be( 1 );
+         calc.GetResult().Should().Be( 3 );
       }
    }
 }
