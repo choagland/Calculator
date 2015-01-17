@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -50,7 +45,11 @@ namespace Calculator
              }
              case Operation.Add:
              {
-                return new AddingStrategy();
+                return new AdditionStrategy();
+             }
+             case Operation.Subtract:
+             {
+                return new SubtractionStrategy();
              }
              default:
              {
@@ -73,11 +72,19 @@ namespace Calculator
       }
    }
 
-   public class AddingStrategy : IMathStrategy
+   public class AdditionStrategy : IMathStrategy
    {
       public double Calculate( double x, double y )
       {
          return x + y;
+      }
+   }
+
+   public class SubtractionStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return x - y;
       }
    }
 }
