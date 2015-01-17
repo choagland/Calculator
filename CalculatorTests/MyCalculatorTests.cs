@@ -63,5 +63,15 @@ namespace CalculatorTests
          calc.SetCurrentNumber( 3 );
          calc.GetResult().Should().Be( 2 );
       }
+
+      [TestMethod]
+      public void GetResult_TwoNumbersMultiplied_ReturnsTheirProduct()
+      {
+         var calc = new MyCalculator();
+         calc.SetCurrentNumber( 2 );
+         calc.SetCurrentOperation( Operation.Multiply );
+         calc.SetCurrentNumber( 3 );
+         calc.GetResult().Should().Be( 6 );
+      }
    }
 }
