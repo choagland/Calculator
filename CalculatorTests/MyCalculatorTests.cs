@@ -73,5 +73,15 @@ namespace CalculatorTests
          calc.SetCurrentNumber( 3 );
          calc.GetResult().Should().Be( 6 );
       }
+
+      [TestMethod]
+      public void GetResult_TwoNumbersDivided_ReturnsTheirQuotient()
+      {
+         var calc = new MyCalculator();
+         calc.SetCurrentNumber( 6 );
+         calc.SetCurrentOperation( Operation.Divide );
+         calc.SetCurrentNumber( 2 );
+         calc.GetResult().Should().Be( 3 );
+      }
    }
 }

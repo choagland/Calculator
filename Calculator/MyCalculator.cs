@@ -8,7 +8,8 @@ namespace Calculator
       Equals,
       InitialState,
       Subtract,
-      Multiply
+      Multiply,
+      Divide
    }
     public class MyCalculator
     {
