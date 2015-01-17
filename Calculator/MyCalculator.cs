@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
+   public enum Operation
+   {
+      Add
+   }
     public class MyCalculator
     {
        private double _currentResult;
@@ -23,6 +27,11 @@ namespace Calculator
        public void SetCurrentNumber( int number )
        {
           _currentResult = number;
+       }
+
+       public void SetCurrentOperation( Operation operation )
+       {
+          throw new NotImplementedException();
        }
     }
 }
