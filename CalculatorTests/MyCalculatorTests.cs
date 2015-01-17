@@ -83,5 +83,15 @@ namespace CalculatorTests
          calc.SetCurrentNumber( 2 );
          calc.GetResult().Should().Be( 3 );
       }
+
+      [TestMethod]
+      public void GetResult_TwoNumbersExponentiated_ReturnsFirstNumberRaisedToSecondNumbersPower()
+      {
+         var calc = new MyCalculator();
+         calc.SetCurrentNumber( 3 );
+         calc.SetCurrentOperation(Operation.Exponent);
+         calc.SetCurrentNumber( 4 );
+         calc.GetResult().Should().Be( 81 );
+      }
    }
 }

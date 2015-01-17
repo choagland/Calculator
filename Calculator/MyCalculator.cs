@@ -9,7 +9,8 @@ namespace Calculator
       InitialState,
       Subtract,
       Multiply,
-      Divide
+      Divide,
+      Exponent
    }
     public class MyCalculator
     {
