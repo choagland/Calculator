@@ -41,5 +41,17 @@ namespace CalculatorTests
          calc.SetCurrentNumber( 2 );
          calc.GetResult().Should().Be( 3 );
       }
+
+      [TestMethod]
+      public void GetResult_ThreeNumbersAddedTogether_ReturnsTheirSum()
+      {
+         var calc = new MyCalculator();
+         calc.SetCurrentNumber( 1 );
+         calc.SetCurrentOperation( Operation.Add );
+         calc.SetCurrentNumber( 2 );
+         calc.SetCurrentOperation( Operation.Add );
+         calc.SetCurrentNumber( 3 );
+         calc.GetResult().Should().Be( 6 );
+      }
    }
 }
