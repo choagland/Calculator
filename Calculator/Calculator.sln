@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator.csproj", "{F8413C77-E69E-48FD-816C-4FAC059DD9CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorTests", "..\CalculatorTests\CalculatorTests.csproj", "{ACD5B746-BC35-4872-A39D-DA3850EA6C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormCalculatorUI", "..\WinFormCalculatorUI\WinFormCalculatorUI.csproj", "{9EB5F980-AC11-4C1A-AC37-69ACA6EE8076}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ACD5B746-BC35-4872-A39D-DA3850EA6C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACD5B746-BC35-4872-A39D-DA3850EA6C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACD5B746-BC35-4872-A39D-DA3850EA6C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB5F980-AC11-4C1A-AC37-69ACA6EE8076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB5F980-AC11-4C1A-AC37-69ACA6EE8076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB5F980-AC11-4C1A-AC37-69ACA6EE8076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB5F980-AC11-4C1A-AC37-69ACA6EE8076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
