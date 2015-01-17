@@ -8,21 +8,21 @@ namespace Calculator
 {
     public class MyCalculator
     {
-       private double CurrentResult;
+       private double _currentResult;
 
        public MyCalculator()
        {
-          CurrentResult = 0;
+          _currentResult = 0;
        }
 
        public double GetResult()
        {
-          return CurrentResult;
+          return _currentResult;
        }
 
        public void SetCurrentNumber( int number )
        {
-          throw new NotImplementedException();
+          _currentResult = number;
        }
     }
 }
