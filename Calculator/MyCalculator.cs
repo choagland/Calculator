@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +9,19 @@ namespace Calculator
 {
    public enum Operation
    {
-      Add
+      Add,
+      Equals,
+      InitialState
    }
     public class MyCalculator
     {
        private double _currentResult;
-       private Operation _currentOperation;
+       private IMathStrategy _currentMathStrategy;
 
        public MyCalculator()
        {
           _currentResult = 0;
+          _currentMathStrategy = new InitialMathStrategy();
        }
 
        public double GetResult()
@@ -27,12 +31,52 @@ namespace Calculator
 
        public void SetCurrentNumber( int number )
        {
-          _currentResult = number;
+          _currentResult = _currentMathStrategy.Calculate( _currentResult, number );
        }
 
        public void SetCurrentOperation( Operation operation )
        {
-          _currentOperation = operation;
+          _currentMathStrategy = SelectMathStrategy( operation );
+       }
+
+       private IMathStrategy SelectMathStrategy( Operation operation )
+       {
+          switch ( operation )
+          {
+             case Operation.InitialState:
+             {
+                return new InitialMathStrategy();
+             }
+             case Operation.Add:
+             {
+                return new AddingStrategy();
+             }
+             default:
+             {
+                throw new NotImplementedException();
+             }
+          }
        }
     }
+
+   public interface IMathStrategy
+   {
+      double Calculate( double x, double y );
+   }
+
+   public class InitialMathStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return y; //because before an operation is specified you'll always want the only number
+      }
+   }
+
+   public class AddingStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return x + y;
+      }
+   }
 }
