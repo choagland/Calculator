@@ -53,5 +53,15 @@ namespace CalculatorTests
          calc.SetCurrentNumber( 3 );
          calc.GetResult().Should().Be( 6 );
       }
+
+      [TestMethod]
+      public void GetResult_TwoNumbersSubtracted_ReturnsTheirDifference()
+      {
+         var calc = new MyCalculator();
+         calc.SetCurrentNumber( 5 );
+         calc.SetCurrentOperation( Operation.Subtract );
+         calc.SetCurrentNumber( 3 );
+         calc.GetResult().Should().Be( 2 );
+      }
    }
 }
