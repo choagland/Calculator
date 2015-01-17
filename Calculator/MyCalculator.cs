@@ -62,6 +62,10 @@ namespace Calculator
              {
                 return new DivisionStrategy();
              }
+             case Operation.Exponent:
+             {
+                return new ExponentiationStrategy();
+             }
              default:
              {
                 throw new NotImplementedException();
@@ -112,6 +116,14 @@ namespace Calculator
       public double Calculate( double x, double y )
       {
          return x / y;
+      }
+   }
+
+   public class ExponentiationStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return Math.Pow( x, y );
       }
    }
 }
