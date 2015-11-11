@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Calculator;
 
 namespace WpfCalculatorUi
 {
@@ -20,9 +21,11 @@ namespace WpfCalculatorUi
    /// </summary>
    public partial class MainWindow : Window
    {
+      private readonly MyCalculator _myCalculator;
       public MainWindow()
       {
          InitializeComponent();
+         _myCalculator = new MyCalculator();
       }
    }
 }
