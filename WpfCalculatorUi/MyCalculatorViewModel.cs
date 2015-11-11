@@ -15,7 +15,7 @@ namespace WpfCalculatorUi
          return _currentResult.ToString();
       }
 
-      public string GetCurrentResultWithAppendedNumber( string appendedNumber )
+      public string NumberIsEntered( string appendedNumber )
       {
          string oldCurrentResult = _currentResult.ToString();
          string newResult = oldCurrentResult + appendedNumber;
@@ -23,6 +23,14 @@ namespace WpfCalculatorUi
          return _currentResult.ToString();
       }
 
+      internal string OperatorIsEntered( Calculator.Operation operation )
+      {
+         throw new NotImplementedException();
+      }
 
+      internal string EqualsIsEntered()
+      {
+         throw new NotImplementedException();
+      }
    }
 }
