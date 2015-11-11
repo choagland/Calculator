@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator;
+using Calculator.Enums;
 
 namespace WpfCalculatorUi
 {
@@ -31,7 +32,7 @@ namespace WpfCalculatorUi
          return _currentResult.ToString();
       }
 
-      internal string OperatorIsEntered( Calculator.Operation operation )
+      internal string OperatorIsEntered( Operation operation )
       {
          _myCalculator.SetCurrentNumber( _currentResult );
          _myCalculator.SetCurrentOperation( operation );

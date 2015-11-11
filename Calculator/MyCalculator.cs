@@ -1,16 +1,8 @@
 ﻿using System;
+using Calculator.Enums;
 
 namespace Calculator
 {
-   public enum Operation
-   {
-      Add,
-      Equals,
-      InitialState,
-      Subtract,
-      Multiply,
-      Divide
-   }
     public class MyCalculator
     {
        private double _currentResult;

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Calculator;
+using Calculator.Enums;
 using FluentAssertions;
 
 namespace CalculatorTests
