@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Calculator;
 
 namespace WpfCalculatorUi
 {
    public class MyCalculatorViewModel
    {
-      private decimal _currentResult;
+      private int _currentResult;
+      private readonly MyCalculator _myCalculator;
 
-      public string GetCurrentResult()
+      public MyCalculatorViewModel( MyCalculator myCalculator )
+      {
+         _myCalculator = myCalculator;
+         _currentResult = 0;
+      }
+
+      public string GetInitialResult()
       {
          return _currentResult.ToString();
       }
@@ -19,18 +27,25 @@ namespace WpfCalculatorUi
       {
          string oldCurrentResult = _currentResult.ToString();
          string newResult = oldCurrentResult + appendedNumber;
-         decimal.TryParse( appendedNumber, out _currentResult );
+         int.TryParse( appendedNumber, out _currentResult );
          return _currentResult.ToString();
       }
 
       internal string OperatorIsEntered( Calculator.Operation operation )
       {
-         throw new NotImplementedException();
+         _myCalculator.SetCurrentNumber( _currentResult );
+         _myCalculator.SetCurrentOperation( operation );
+         return _myCalculator.GetResult().ToString();
       }
 
       internal string EqualsIsEntered()
       {
-         throw new NotImplementedException();
+         string result;
+         _myCalculator.SetCurrentNumber( _currentResult );
+         result = _myCalculator.GetResult().ToString();
+         _myCalculator.SetCurrentNumber( 0 );
+         _myCalculator.SetCurrentOperation( Operation.InitialState );
+         return result;
       }
    }
 }

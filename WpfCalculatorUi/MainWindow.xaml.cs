@@ -25,7 +25,8 @@ namespace WpfCalculatorUi
       public MainWindow()
       {
          InitializeComponent();
-         _viewModel = new MyCalculatorViewModel();
+         _viewModel = new MyCalculatorViewModel( new MyCalculator() );
+         ResultsDisplay.Text = _viewModel.GetInitialResult();
       }
 
       private void button_one_Click( object sender, RoutedEventArgs e )
