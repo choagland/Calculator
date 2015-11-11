@@ -21,11 +21,91 @@ namespace WpfCalculatorUi
    /// </summary>
    public partial class MainWindow : Window
    {
-      private readonly MyCalculator _myCalculator;
+      private readonly MyCalculatorViewModel _viewModel;
       public MainWindow()
       {
          InitializeComponent();
-         _myCalculator = new MyCalculator();
+         _viewModel = new MyCalculatorViewModel();
+      }
+
+      private void button_one_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_two_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_three_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_four_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_five_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_six_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_seven_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_eight_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_nine_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_addition_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_subtraction_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_multiplication_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_division_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_equals_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_zero_Click( object sender, RoutedEventArgs e )
+      {
+
+      }
+
+      private void button_decimalPoint_Click( object sender, RoutedEventArgs e )
+      {
+
       }
    }
 }

@@ -22,17 +22,17 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" Content="7"/>
-                    <Button Grid.Column="1" Grid.Row="0" Content="8"/>
-                    <Button Grid.Column="2" Grid.Row="0" Content="9"/>
-                    <Button Grid.Column="0" Grid.Row="1" Content="4"/>
-                    <Button Grid.Column="1" Grid.Row="1" Content="5"/>
-                    <Button Grid.Column="2" Grid.Row="1" Content="6"/>
-                    <Button Grid.Column="0" Grid.Row="2" Content="1"/>
-                    <Button Grid.Column="1" Grid.Row="2" Content="2"/>
-                    <Button Grid.Column="2" Grid.Row="2" Content="3"/>
-                    <Button Grid.Column="0" Grid.Row="3" Content="0"/>
-                    <Button Grid.Column="2" Grid.Row="3" Content="."/>
+                    <Button Name="button_seven" Grid.Column="0" Grid.Row="0" Content="7" Click="button_seven_Click"/>
+                    <Button Name="button_eight" Grid.Column="1" Grid.Row="0" Content="8" Click="button_eight_Click"/>
+                    <Button Name="button_nine" Grid.Column="2" Grid.Row="0" Content="9" Click="button_nine_Click"/>
+                    <Button Name="button_four" Grid.Column="0" Grid.Row="1" Content="4" Click="button_four_Click"/>
+                    <Button Name="button_five" Grid.Column="1" Grid.Row="1" Content="5" Click="button_five_Click"/>
+                    <Button Name="button_six" Grid.Column="2" Grid.Row="1" Content="6" Click="button_six_Click"/>
+                    <Button Name="button_one" Grid.Column="0" Grid.Row="2" Content="1" Click="button_one_Click"/>
+                    <Button Name="button_two" Grid.Column="1" Grid.Row="2" Content="2" Click="button_two_Click"/>
+                    <Button Name="button_three" Grid.Column="2" Grid.Row="2" Content="3" Click="button_three_Click"/>
+                    <Button Name="button_zero" Grid.Column="0" Grid.Row="3" Content="0" Click="button_zero_Click"/>
+                    <Button Name="button_decimalPoint" Grid.Column="2" Grid.Row="3" Content="." Height="67" VerticalAlignment="Bottom" Click="button_decimalPoint_Click"/>
                 </Grid>
                 <Grid Grid.Column="1" Height="270" Width="200" Margin="20,20" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Grid.ColumnDefinitions>
@@ -46,11 +46,11 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" Content="+" />
-                    <Button Grid.Column="1" Grid.Row="0" Content="-" />
-                    <Button Grid.Column="2" Grid.Row="0" Content="*" />
-                    <Button Grid.Column="0" Grid.Row="1" Content="/" />
-                    <Button Grid.Column="2" Grid.Row="3" Content="=" />
+                    <Button Name="button_addition" Grid.Column="0" Grid.Row="0" Content="+" Click="button_addition_Click" />
+                    <Button Name="button_subtraction" Grid.Column="1" Grid.Row="0" Content="-" Click="button_subtraction_Click" />
+                    <Button Name="button_multiplication" Grid.Column="2" Grid.Row="0" Content="*" Click="button_multiplication_Click" />
+                    <Button Name="button_division" Grid.Column="0" Grid.Row="1" Content="/" Click="button_division_Click" />
+                    <Button Name="button_equals" Grid.Column="2" Grid.Row="3" Content="=" Click="button_equals_Click" />
                 </Grid>
 
             </Grid>
