@@ -75,6 +75,10 @@
       <Project>{f8413c77-e69e-48fd-816c-4fac059dd9cc}</Project>
       <Name>Calculator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WpfCalculatorUi\WpfCalculatorUi.csproj">
+      <Project>{56d7aa94-48d4-4601-ab67-b99d696d7447}</Project>
+      <Name>WpfCalculatorUi</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

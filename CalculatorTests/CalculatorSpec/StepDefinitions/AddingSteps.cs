@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Calculator;
+using Calculator.Enums;
+using WpfCalculatorUi;
 using TechTalk.SpecFlow;
+using FluentAssertions;
 
 namespace CalculatorTests.CalculatorSpec.StepDefinitions
 {
@@ -11,34 +15,44 @@ namespace CalculatorTests.CalculatorSpec.StepDefinitions
    {
       // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
 
-      [Given(@"I have started the calculator")]
+      [Given( @"I have started the calculator" )]
       public void GivenIHaveStartedTheCalculator()
       {
-         ScenarioContext.Current.Pending();
+         ScenarioContext.Current.Add( "viewModel", new MyCalculatorViewModel( new MyCalculator() ) );
       }
 
-      [When(@"I enter the number ""(.*)""")]
-      public void WhenIEnterTheNumber(int p0)
+      [When( @"I enter the number ""(.*)""" )]
+      public void WhenIEnterTheNumber( string number )
       {
-         ScenarioContext.Current.Pending();
+         var calc = ScenarioContext.Current.Get<MyCalculatorViewModel>( "viewModel" );
+         calc.NumberIsEntered( number );
       }
 
-      [When(@"I press the ""(.*)"" button")]
-      public void WhenIPressTheButton(string p0)
+      [When( @"I press the ""(.*)"" button" )]
+      public void WhenIPressTheButton( string operatorName )
       {
-         ScenarioContext.Current.Pending();
+         var calc = ScenarioContext.Current.Get<MyCalculatorViewModel>( "viewModel" );
+         Operation operation;
+         Enum.TryParse<Operation>( operatorName, out operation );
+         calc.OperatorIsEntered( operation );
       }
 
-      [When(@"I hit the ""(.*)"" button")]
-      public void WhenIHitTheButton(string p0)
+      [When( @"I hit the equals button" )]
+      public void WhenIHitTheEqualsButton()
       {
-         ScenarioContext.Current.Pending();
+         var calc = ScenarioContext.Current.Get<MyCalculatorViewModel>( "viewModel" );
+         double result;
+         double.TryParse( calc.EqualsIsEntered(), out result );
+         ScenarioContext.Current.Add( "actualResult", result );
       }
 
-      [Then(@"the result should be ""(.*)""")]
-      public void ThenTheResultShouldBe(int p0)
+
+      [Then( @"the result should be ""(.*)""" )]
+      public void ThenTheResultShouldBe( int expectedResult )
       {
-         ScenarioContext.Current.Pending();
+         var actualResult = ScenarioContext.Current.Get<double>( "actualResult" );
+         actualResult.Should().Be( expectedResult );
+         
       }
 
    }

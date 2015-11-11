@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\Operation.cs" />
+    <Compile Include="MathStrategies\IMathStrategy.cs" />
+    <Compile Include="MathStrategies\MathStrategyFactory.cs" />
     <Compile Include="MyCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

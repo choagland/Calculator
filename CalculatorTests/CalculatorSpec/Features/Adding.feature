@@ -6,5 +6,5 @@ Scenario: Add two numbers
 	When I enter the number "1"
 	And I press the "+" button
 	And I enter the number "2"
-	When I hit the "=" button
+	When I hit the equals button
 	Then the result should be "3"

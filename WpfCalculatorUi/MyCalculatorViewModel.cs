@@ -32,14 +32,14 @@ namespace WpfCalculatorUi
          return _currentResult.ToString();
       }
 
-      internal string OperatorIsEntered( Operation operation )
+      public string OperatorIsEntered( Operation operation )
       {
          _myCalculator.SetCurrentNumber( _currentResult );
          _myCalculator.SetCurrentOperation( operation );
          return _myCalculator.GetResult().ToString();
       }
 
-      internal string EqualsIsEntered()
+      public string EqualsIsEntered()
       {
          string result;
          _myCalculator.SetCurrentNumber( _currentResult );
